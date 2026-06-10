@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LIC Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='dashboard.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>LIC Policy Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<h2>Total Policies</h2>
+<p>{{ total_count }}</p>
+</div>
+
+<div class="card">
+<h2>Current Policies</h2>
+<p>{{ current_count }}</p>
+</div>
+
+<div class="card">
+<h2>Lapsed Policies</h2>
+<p>{{ lapsed_count }}</p>
+</div>
+<div class="buttons">
+
+    <a href="/allpolicies">
+    <button>Total Policies</button>
+</a>
+
+<a href="/current">
+    <button>Current Policies</button>
+</a>
+
+<a href="/lapsed">
+    <button>Lapsed Policies</button>
+</a>
+
+<a href="/upload">
+    <button>Upload BLISS Backup</button>
+</a>
+
+
+
+</div>
+
+<div class="search-box">
+
+    <h3>Search By Status</h3>
+
+    <form action="/search-status" method="GET">
+
+        <input
+            type="text"
+            name="q"
+            placeholder="Lapsed, In grace period, FULLY PAID-UP">
+
+        <button type="submit">
+            Search Status
+        </button>
+
+    </form>
+
+    <br><br>
+
+    <h3>Search By Name / Policy No</h3>
+
+    <form action="/search-customer" method="GET">
+
+        <input
+            type="text"
+            name="q"
+            placeholder="Customer Name or Policy Number">
+
+        <button type="submit">
+            Search Customer
+        </button>
+
+    </form>
+
+</div>
+
+<div class="buttons">
+
+
+
+
+</div>
+
+</body>
+</html>

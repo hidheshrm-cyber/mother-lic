@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mother LIC Dashboard</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div id="animation">
+        👩‍👦
+    </div>
+
+    <h1>Mother LIC Dashboard</h1>
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Username">
+
+    <input
+        type="password"
+        id="password"
+        placeholder="Password">
+
+    <button onclick="login()">
+        Login
+    </button>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+
+function login(){
+
+    let user =
+        document.getElementById("username").value
+
+    let pass =
+        document.getElementById("password").value
+
+    if(
+        user==="mother" &&
+        pass==="lic123"
+    ){
+
+        document.getElementById("animation")
+        .innerHTML="👩‍👦😊"
+
+        window.location.href="/dashboard"
+
+    }
+    else{
+
+        document.getElementById("animation")
+        .innerHTML="👩‍👦👎"
+
+        document.getElementById("message")
+        .innerHTML="Wrong Username or Password"
+
+    }
+}
+
+</script>
+
+</body>
+</html>

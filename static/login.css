@@ -1,0 +1,88 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:linear-gradient(
+        135deg,
+        #0b1d51,
+        #1e3c72
+    );
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 100px;
+}
+
+.character{
+    font-size:140px;
+    transition:2s;
+}
+
+.login-box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    width:350px;
+    text-align:center;
+    box-shadow:0 0 25px rgba(0,0,0,0.3);
+}
+
+input{
+    width:90%;
+    padding:12px;
+    margin:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+button{
+    width:95%;
+    padding:12px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.success{
+    color:green;
+    font-weight:bold;
+}
+
+.error{
+    color:red;
+    font-weight:bold;
+}
+
+.hug-left{
+    transform:translateX(400px);
+}
+
+.hug-right{
+    transform:translateX(-400px);
+}
+
+@keyframes shake{
+    0%{transform:rotate(0deg);}
+    25%{transform:rotate(-10deg);}
+    50%{transform:rotate(10deg);}
+    75%{transform:rotate(-10deg);}
+    100%{transform:rotate(0deg);}
+}
+
+.shake{
+    animation:shake 0.5s infinite;
+}
