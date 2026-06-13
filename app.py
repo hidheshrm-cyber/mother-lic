@@ -354,6 +354,17 @@ AND p.perscode = c.perscode
     html += "</table>"
 
     return html
+    @app.route("/dbtest")
+def dbtest():
+    import sqlite3
+
+    conn = sqlite3.connect("extracted/licmdb.s3db")
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
+    tables = cursor.fetchall()
+
+    return str(tables)
 @app.route("/search")
 def search():
 
